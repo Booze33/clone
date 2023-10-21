@@ -1,16 +1,15 @@
 import { useState, useEffect } from 'react';
 
 function App() {
-  const [mode, setMode] = useState(localStorage.getItem('theme') || 'light');
-
-  const handleDarkMode = () => {
-    setMode('dark');
-    localStorage.setItem('theme', 'dark');
+  const getInitialTheme = () => {
+    return localStorage.getItem('theme') || 'light';
   };
 
-  const handleLightMode = () => {
-    setMode('light');
-    localStorage.setItem('theme', 'light');
+  const [mode, setMode] = useState(getInitialTheme);
+
+  const handleThemeChange = (newTheme) => {
+    setMode(newTheme);
+    localStorage.setItem('theme', newTheme);
   };
 
   useEffect(() => {
@@ -21,11 +20,12 @@ function App() {
   }, []);
 
   return (
-    <div className={`bg-${mode} w-screen h-12`}>
-      <h1 className={`text-${mode}`}>Theme</h1>
+    <div className={`bg-${mode} w-screen h-12 text-${mode}`}>
+      <h1>Theme</h1>
+      <p>lorem this is the test for handling theme pray it works</p>
 
-      <button onClick={handleDarkMode}>Set Dark Theme</button>
-      <button onClick={handleLightMode}>Set Light Theme</button>
+      <button onClick={() => handleThemeChange('dark')}>Set Dark Theme</button>
+      <button onClick={() => handleThemeChange('light')}>Set Light Theme</button>
     </div>
   );
 }
