@@ -1,6 +1,6 @@
 // import { useState, useEffect } from 'react';
 
-// function App() {
+function App() {
 //   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'system');
 //   const element = document.documentElement;
 //   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
@@ -83,6 +83,6 @@
 //       <button onClick={() => handleThemeChange('light')}>Set Light Theme</button> */}
 //     </div>
 //   );
-// }
+}
 
-// export default App;
+export default App;
