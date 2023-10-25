@@ -1,10 +1,10 @@
 // import { useState, useEffect } from 'react';
 
 function App() {
-//   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'system');
-//   const element = document.documentElement;
-//   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
-//   console.log(darkQuery, "darkQuery");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'system');
+  const element = document.documentElement;
+  const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+  console.log(darkQuery, "darkQuery");
 //   const options = [
 //     {
 //       icon: "sunny",
