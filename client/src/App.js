@@ -5,20 +5,20 @@ function App() {
   const element = document.documentElement;
   const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
   console.log(darkQuery, "darkQuery");
-//   const options = [
-//     {
-//       icon: "sunny",
-//       text: "light"
-//     },
-//     {
-//       icon: "moon",
-//       text: "dark"
-//     },
-//     {
-//       icon: "desktop-outline",
-//       text: "system"
-//     }
-//   ];
+  const options = [
+    {
+      icon: "sunny",
+      text: "light"
+    },
+    {
+      icon: "moon",
+      text: "dark"
+    },
+    {
+      icon: "desktop-outline",
+      text: "system"
+    }
+  ];
 
 //   const onWindowMatch = () => {
 //     if (localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)){
