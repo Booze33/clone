@@ -20,13 +20,13 @@ function App() {
     }
   ];
 
-//   const onWindowMatch = () => {
-//     if (localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)){
-//       element.classList.add("dark");
-//     } else {
-//       element.classList.remove("dark");
-//     }
-//   }
+  const onWindowMatch = () => {
+    if (localStorage.theme === 'dark' || (!("theme" in localStorage) && darkQuery.matches)){
+      element.classList.add("dark");
+    } else {
+      element.classList.remove("dark");
+    }
+  }
 
 //   onWindowMatch();
 
