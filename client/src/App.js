@@ -28,24 +28,24 @@ function App() {
     }
   }
 
-//   onWindowMatch();
+  onWindowMatch();
 
-//   useEffect(()=> {
-//     switch (theme) {
-//       case 'dark':
-//         element.classList.add('dark');
-//         localStorage.setItem('theme', 'dark');
-//         break;
-//       case 'light':
-//         element.classList.remove('dark');
-//         localStorage.setItem('theme', 'light');
-//         break;
-//       default:
-//         localStorage.removeItem('theme');
-//         onWindowMatch();
-//         break;
-//     }
-//   }, [theme]);
+  useEffect(()=> {
+    switch (theme) {
+      case 'dark':
+        element.classList.add('dark');
+        localStorage.setItem('theme', 'dark');
+        break;
+      case 'light':
+        element.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+        break;
+      default:
+        localStorage.removeItem('theme');
+        onWindowMatch();
+        break;
+    }
+  }, [theme]);
 
 //   darkQuery.addEventListener("change", (e) => {
 //     if(!("theme" in localStorage)) {
