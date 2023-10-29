@@ -47,15 +47,15 @@ function App() {
     }
   }, [theme]);
 
-//   darkQuery.addEventListener("change", (e) => {
-//     if(!("theme" in localStorage)) {
-//       if(e.matches){
-//         element.classList.add("dark");
-//       } else {
-//         element.classList.remove("dark");
-//       }
-//     }
-//   })
+  darkQuery.addEventListener("change", (e) => {
+    if(!("theme" in localStorage)) {
+      if(e.matches){
+        element.classList.add("dark");
+      } else {
+        element.classList.remove("dark");
+      }
+    }
+  })
 
 //   return (
 //     <div className="dark:bg-dark dark:text-dark w-screen h-52" >
