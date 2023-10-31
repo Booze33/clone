@@ -1,4 +1,4 @@
-// import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 function App() {
   const [theme, setTheme] = useState(localStorage.getItem("theme") ? localStorage.getItem("theme") : 'system');
@@ -58,7 +58,7 @@ function App() {
   })
 
   return (
-    <div className="dark:bg-dark dark:text-dark w-screen h-52" >
+    <div className="dark:bg-dark bg-light dark:text-dark text-light w-screen h-52" >
       <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gary-100 rounded-full">
         {
           options?.map(opt => (
@@ -78,9 +78,6 @@ function App() {
       <p>lorem this is the test for handling theme pray it works</p>
       <p>lorem this is the test for handling theme pray it works</p>
       <p>lorem this is the test for handling theme pray it works</p>
-
-      {/* <button onClick={() => handleThemeChange('dark')}>Set Dark Theme</button>
-      <button onClick={() => handleThemeChange('light')}>Set Light Theme</button> */}
     </div>
   );
 }
