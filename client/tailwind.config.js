@@ -10,6 +10,12 @@ module.exports = {
         'dark': '#0c134f',
         'light': '#e5d4ff',
       },
+      width: {
+        'logo': '6rem',
+      },
+      height: {
+        'logo': '3rem',
+      },
       textColor: {
         'light': '#0c134f',
         'dark': '#e5d4ff',
