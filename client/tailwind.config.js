@@ -12,9 +12,11 @@ module.exports = {
       },
       width: {
         'logo': '6rem',
+        'full': '100%',
       },
       height: {
         'logo': '3rem',
+        'full': '100%',
       },
       textColor: {
         'light': '#0c134f',

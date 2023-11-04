@@ -58,8 +58,8 @@ function Theme() {
   })
 
   return (
-    <div className="dark:bg-dark bg-light dark:text-dark text-light w-screen h-52" >
-      <div className="fixed top-5 right-10 duration-100 dark:bg-slate-700 bg-gary-100 rounded-full">
+    <div>
+      <div className="fixed top-12 right-10 duration-100 dark:bg-slate-700 bg-gary-100 rounded-full">
         {
           options?.map(opt => (
             <button
@@ -72,12 +72,6 @@ function Theme() {
         }
         
       </div>
-
-      <h1>Theme</h1>
-      <p>lorem this is the test for handling theme pray it works</p>
-      <p>lorem this is the test for handling theme pray it works</p>
-      <p>lorem this is the test for handling theme pray it works</p>
-      <p>lorem this is the test for handling theme pray it works</p>
     </div>
   );
 }
