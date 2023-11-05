@@ -8,20 +8,26 @@ module.exports = {
     extend: {
       backgroundColor: {
         'dark': '#0c134f',
-        'light': '#e5d4ff',
+        'light': '#F1EAFF',
       },
       width: {
         'logo': '6rem',
         'full': '100%',
+        'display': '60vw',
+        'half': '50%',
       },
       height: {
         'logo': '3rem',
         'full': '100%',
+        'display': '50rem',
       },
       textColor: {
         'light': '#0c134f',
         'dark': '#e5d4ff',
-      }
+      },
+      left: {
+        'nav': "22rem",
+      },
     },
   },
   plugins: [],
