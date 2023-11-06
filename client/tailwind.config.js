@@ -8,12 +8,13 @@ module.exports = {
     extend: {
       backgroundColor: {
         'dark': '#0c134f',
-        'light': '#F1EAFF',
+        'light': '#f1eaff',
       },
       width: {
         'logo': '6rem',
         'full': '100%',
         'display': '60vw',
+        'feature': '80vw',
         'half': '50%',
       },
       height: {
@@ -23,11 +24,13 @@ module.exports = {
       },
       textColor: {
         'light': '#0c134f',
+        'light-2': '#f1eaff',
         'dark': '#e5d4ff',
+        'dark-2': '#1d267d',
       },
-      left: {
-        'nav': "22rem",
-      },
+      boxShadow: {
+        '3xl': 'inset 6px 34px 30px -21px rgba(176,136,227,0.75)',
+      }
     },
   },
   plugins: [],
