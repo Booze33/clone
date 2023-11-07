@@ -9,6 +9,8 @@ module.exports = {
       backgroundColor: {
         'dark': '#0c134f',
         'light': '#f1eaff',
+        'gold': '#F39F5A',
+        'maron': '#662549'
       },
       width: {
         'logo': '6rem',
@@ -21,6 +23,7 @@ module.exports = {
         'logo': '3rem',
         'full': '100%',
         'display': '50rem',
+        'grid': '55vh',
       },
       textColor: {
         'light': '#0c134f',
