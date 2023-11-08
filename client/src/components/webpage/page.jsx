@@ -1,4 +1,4 @@
-import logo from "../../assets/Demo.png";
+import Footer from './footer';
 import Card from "../../features/card";
 
 const Page = () => {
@@ -12,7 +12,7 @@ const Page = () => {
         <button className="mt-12 relative p-2 dark:text-light text-dark duration-100 bg-slate-800 dark:bg-slate-200 rounded-full">Get Started</button>
       </section>
 
-      <section className="w-screen my-32 flex flex-col items-center justify-center">
+      <section className="w-screen mt-32 flex flex-col items-center justify-center">
         <h1 className="text-6xl font-bold">AI Features</h1>
         <div className="grid grid-cols-2 grid-rows-2 w-feature place-items-center gap-x-10 gap-y-10 my-8">
           <Card className="row-span-1 col-span-1" />
@@ -20,6 +20,9 @@ const Page = () => {
           <Card className="row-span-1 col-span-1" />
           <Card className="row-span-1 col-span-1" />
         </div>
+      </section>
+      <section>
+        <Footer/>
       </section>
     </div>
   )
