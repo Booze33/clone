@@ -1,28 +1,36 @@
-const axios = require('axios');
-require('dotenv').config();
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { sendMsg, selectStatus, selectData } from '../redux/openai/aiSlice';
 
-const OPENAI_API_KEY = process.env.API_KEY;
+const Test = () => {
+  const [input, setInput] = useState('');
+  const dispatch = useDispatch();
+  const status = useSelector(selectStatus);
+  const data = useSelector(selectData);
 
-const apiUrl = 'https://api.openai.com/v1/chat/completions';
+  const handleClick = async () => {
+    dispatch(sendMsg(input));
+  };
 
-const requestData = {
-  model: 'gpt-3.5-turbo',
-  messages: [{ role: 'user', content: 'Say this is a test!' }],
-  temperature: 0.7
+  useEffect(() => {
+    if (status === 'succeeded') {
+      console.log(data);
+    } else if (status === 'failed') {
+      console.error('Error:', data);
+    }
+  }, [status, data]);
+
+  return (
+    <div>
+      <input
+        type="text"
+        placeholder="Send Message"
+        value={input}
+        onChange={(e) => setInput(e.target.value)}
+      />
+      <button onClick={handleClick}>Send</button>
+    </div>
+  );
 };
 
-const headers = {
-  'Content-Type': 'application/json',
-  'Authorization': `Bearer ${OPENAI_API_KEY}`
-};
-
-async function makeApiRequest() {
-  try {
-    const response = await axios.post(apiUrl, requestData, { headers });
-    console.log(response.data);
-  } catch (error) {
-    console.error('Error:', error.response ? error.response.data : error.message);
-  }
-}
-
-makeApiRequest();
+export default Test;
